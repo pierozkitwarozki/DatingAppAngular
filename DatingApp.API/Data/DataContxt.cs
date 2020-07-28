@@ -5,9 +5,10 @@ namespace DatingApp.API.Data
 {
     public class DataContxt : DbContext
     {
-        public DataContxt(DbContextOptions<DataContxt> options) : base(options){}
-        public DbSet<Value> Values { get; set; }
+        public DataContxt(DbContextOptions<DataContxt> options) : base(options) { }
+        public DbSet<Value> Values { get; set; } 
         public DbSet<User> Users { get; set; }
+        public DbSet<Photo> Photos { get; set; }
 
     }
 }
