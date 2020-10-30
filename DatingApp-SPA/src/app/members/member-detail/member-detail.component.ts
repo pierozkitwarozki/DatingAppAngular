@@ -31,26 +31,30 @@ export class MemberDetailComponent implements OnInit {
     });
 
     this.galleryOptions = [
-      { imagePercent: 80, thumbnailsPercent: 20, thumbnailsColumns: 6, thumbnailsMargin: 0, thumbnailMargin: 0 },
-      { breakpoint: 500, width: '300px', height: '300px', thumbnailsColumns: 3 },
-      { breakpoint: 300, width: '100%', height: '200px', thumbnailsColumns: 2 }
+      {
+        width: '500px',
+        height: '500px',
+        imagePercent: 100,
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide,
+        preview: false
+      }
       ];
 
     this.galleryImages = this.getImages();
   }
 
-  getImages() {
+  getImages(){
     const imageUrls = [];
-    let url = '';
     for (const photo of this.user.photos) {
-      url = photo.url.toString();
       imageUrls.push({
-        small: url,
-        medium: url,
-        big: url,
-        description: photo.description,
+        small: photo.url,
+        medium: photo.url,
+        big: photo.url,
+        description: photo.description
       });
     }
+
     return imageUrls;
   }
 }
