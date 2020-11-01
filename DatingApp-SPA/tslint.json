@@ -2,6 +2,7 @@
   "extends": "tslint:recommended",
   "rules": {
     "no-string-literal": false,
+    "object-literal-key-quotes": false,
     "align": {
       "options": [
         "parameters",
@@ -73,10 +74,10 @@
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
     "no-var-requires": false,
-    "object-literal-key-quotes": [
-      true,
-      "as-needed"
-    ],
+   // "object-literal-key-quotes": [
+     // true,
+      //"as-needed"
+    //],
     "quotemark": [
       true,
       "single"
